@@ -1,0 +1,40 @@
+
+public class Bank {
+	private double total;
+	
+	/*
+	 * Default set initial amount
+	 */
+	public Bank(double initial) {
+		total = initial;
+	}
+	
+	/*
+	 * Return total after deposit
+	 */
+	public double Deposit(double deposit) {
+		if(deposit > 0) {
+			total += deposit;
+		}
+		return total;
+	}
+	
+	
+	/*
+	 * Return total after withdraw
+	 */
+	public double WithDraw(double withdraw) {
+		if(withdraw > total) {
+			return 0;
+		}
+		total -= withdraw;
+		return total;
+	}
+	
+	/*
+	 * Return Bank amount
+	 */
+	public double Amount() {
+		return total;
+	}
+}
